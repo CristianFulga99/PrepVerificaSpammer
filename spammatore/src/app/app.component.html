@@ -1,14 +1,16 @@
-<form>
-<label>Cose inutili:</label>
-<input type='text' name = 'inutile' #new_inutile>
-<label>Numero:</label>
-<input type='number' name = 'numero' #new_number>
-
-<button (click) = 'onClick(new_inutile , new_number)'>Drakaris</button>
+<div class="container">
+  <form class="jumbotron">
+  <h3 class="display-5">Brucia, maledetto spammer</h3>
+  <label>Scrivi qui:</label>
+  <input type='text' name = 'inutile' #new_inutile class="form-control">
+<br>
+  <label>Quante volte?</label>
+  <input type='number' name = 'numero' #new_number class="form-control">
+  <br>
+  <button class="btn btn-danger" (click) = 'onClick(new_inutile , new_number)'>Drakaris</button>
 </form>
-
-<ul>
-<li *ngFor='let frase of articles'>
-<app-frase [frase]='frase'></app-frase>
-</li>
+  <ul>
+  <li *ngFor='let frase of articles'>
+  <app-frase [frase]='frase'></app-frase>
+  </li>
 </ul>
